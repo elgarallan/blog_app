@@ -1,17 +1,10 @@
-<div id="<%= dom_id comment %>">
-  <p>
-    <strong>Post:</strong>
-    <%= comment.post_id %>
-  </p>
-
-  <p>
-    <strong>Content:</strong>
-    <%= comment.content %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= comment.author %>
-  </p>
-
+<div class="box">
+  <div class="content">
+    <p>
+      <strong><%= comment.author %></strong>
+      </br>
+      <%= comment.content %>      
+    </p>
+  </div>
 </div>
+

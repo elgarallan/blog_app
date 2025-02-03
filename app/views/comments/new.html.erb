@@ -1,11 +1,14 @@
-<% content_for :title, "New comment" %>
-
-<h1>New comment</h1>
-
-<%= render "form", comment: @comment %>
-
-<br>
-
-<div>
-  <%= link_to "Back to comments", comments_path %>
-</div>
+<h1>New Comment</h1>
+<%= form_with(model: [@post, @comment]) do | f | %>
+  <div>
+    <%= f.label "Name:" %>
+    <%= f.text_field :author %>
+  </div>
+  <br/>
+  <div>
+    <%= f.label "Comment:" %>
+    <%= f.text_field :content %>
+  </div>
+  <br/>
+  <%= f.submit %>
+<% end %>
