@@ -1,11 +1,24 @@
 <% content_for :title, "New post" %>
 
-<h1>New post</h1>
+<div class="wrapper">
+  <div class="main-content">
+   
+    <h1>New post</h1>
 
-<%= render "form", post: @post %>
+    <%= render "form", post: @post %>
+    
+    <br>
+    
+    <div>
+      <%= link_to "Back to posts", posts_path %>
+    </div>
 
-<br>
+  </div>
 
-<div>
-  <%= link_to "Back to posts", posts_path %>
+  <footer>
+    Avion School 2025
+  </footer>
+  
 </div>
+
+

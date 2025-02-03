@@ -2,19 +2,30 @@
 
 <% content_for :title, "Posts" %>
 
-<h1>Blogpalooza</h1>
+<div class="wrapper">
+  <div class="main-content">
+    
+    <h1>Green Eggs & Ham</h1>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
+    <div id="posts">
+      <% @posts.each do |post| %>
+        <%= render post %>
+    
+        <p>
+          <%= link_to "Read more", post %>
+        </p>
+    
+        <hr>
+    
+      <% end %>
+    </div>
+    
+    <%= link_to "Write new post", new_post_path %>
 
-    <p>
-      <%= link_to "Read more", post %>
-    </p>
+  </div>
 
-    <hr>
+  <footer>
+    <span>Avion School 2025<span>
+  </footer>
 
-  <% end %>
 </div>
-
-<%= link_to "Write New post", new_post_path %>
